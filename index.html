@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- top bar -->
+    <header class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="assets/images/TestLogo.png" alt="Test Logo" id="logo">
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <div class="nav-item">
+                <img src="assets/images/homeIcon.png" alt="Home Icon" class="nav-icon home-icon">
+                <a href="#" class="nav-link overview-link">Overview</a>
+            </div>
+
+            <div class="nav-item">
+                <img src="assets/images/patientsIcon.png" alt="Patients Icon" class="nav-icon patients-icon">
+                <a href="#" class="nav-link patients-link">Patients</a>
+            </div>
+
+            <div class="nav-item">
+                <img src="assets/images/scheduleIcon.png" alt="Schedule Icon" class="nav-icon schedule-icon">
+                <a href="#" class="nav-link schedule-link">Schedule</a>
+            </div>
+
+            <div class="nav-item">
+                <img src="assets/images/messageIcon.png" alt="Message Icon" class="nav-icon message-icon">
+                <a href="#" class="nav-link message-link">Message</a>
+            </div>
+
+            <div class="nav-item">
+                <img src="assets/images/transactionIcon.png" alt="Transaction Icon" class="nav-icon transaction-icon">
+                <a href="#" class="nav-link transaction-link">Transactions</a>
+            </div>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="user-profile">
+            <img src="assets/images/womanDr.png" alt="User Profile Picture" class="profile-pic">
+            <span class="user-info">
+                <span class="user-name">Dr. Jose Simmons</span>
+                <span class="user-role">General Practitioner</span>
+            </span>
+            <div class="settings">
+                <div class="settings-icon">
+                    <img src="assets/images/settingIcon.png" alt="Settings Icon">
+                </div>
+                <div class="more-icon">
+                    <img src="assets/images/moreIcon.png" alt="More Options Icon">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-section">
+        <!-- patient list on the left -->
+        <div class="patients-section">
+            <!-- Title and Search Bar -->
+            <div class="patients-header">
+                <h2>Patients</h2>
+                <div class="search-container">
+                    <img src="assets/images/searchIcon.png" alt="Search Icon" class="search-icon">
+                </div>
+            </div>
+    
+            <!-- Patients List -->
+            <ul class="patients-list" id="patientsList"></ul> <!-- Empty container for dynamic list -->
+        </div>
+    </div>
+    
+    
+
+        <div class="diagnosis-history-section">
+            <!-- Title -->
+            <h1>Diagnosis History</h1>
+
+            <div class="blood-pressure-container">
+                <h3>Blood Pressure
+                    <span class="time-frame">
+                        Last 6 months
+                        <img src="assets/images/expandMore.png" alt="Dropdown Icon" class="dropdown-icon">
+                    </span>
+                </h3>
+                <canvas id="bloodPressureChart"></canvas>
+
+                <div class="blood-pressure-stats">
+                    <!-- Systolic Section -->
+                    <div class="pressure-stat-item">
+                        <div class="bullet-container">
+                            <div class="bullet-point"></div>
+                            <span class="stat-label">Systolic</span>
+                        </div>
+                        <div class="stat-value">
+                            <span class="stat">160</span>
+                        </div>
+                        <div class="status">
+                            <img src="assets/images/arrowUp.png" alt="Increase Icon" class="arrow-icon">
+                            <span>Higher than Average</span>
+                        </div>
+                    </div>
+
+                    <!-- Vertical line separator -->
+                    <div class="line-separator"></div>
+
+                    <!-- Diastolic Section -->
+                    <div class="pressure-stat-item">
+                        <div class="bullet-container">
+                            <div class="bullet-point"></div>
+                            <span class="stat-label">Diastolic</span>
+                        </div>
+                        <div class="stat-value">
+                            <span class="stat">78</span>
+                        </div>
+                        <div class="status">
+                            <img src="assets/images/arrowDown.png" alt="Decrease Icon" class="arrow-icon">
+                            <span>Lower than Average</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vital Stats Section -->
+            <div class="vital-stats-wrapper">
+                <div class="vital-stats-container">
+                    <!-- Respiratory Rate Box -->
+                    <div class="stat-item-container respiratory-rate">
+                        <img src="assets/images/respiRate.png" alt="Respiratory Rate Icon">
+                        <p class="stat-title">Respiratory Rate</p>
+                        <p class="stat-value">20 bpm</p>
+                        <p class="stat-status">Normal</p>
+                    </div>
+
+                    <!-- Temperature Box -->
+                    <div class="stat-item-container temperature">
+                        <img src="assets/images/temp.png" alt="Temperature Icon">
+                        <p class="stat-title">Temperature</p>
+                        <p class="stat-value">98.6°F</p>
+                        <p class="stat-status">Normal</p>
+                    </div>
+
+                    <!-- Heart Rate Box -->
+                    <div class="stat-item-container heart-rate">
+                        <img src="assets/images/HeartBPM.png" alt="Heart Rate Icon">
+                        <p class="stat-title">Heart Rate</p>
+                        <p class="stat-value">78 bpm</p>
+                        <p class="stat-status">Lower than Average</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="C:\Users\pinkd\OneDrive\Documents\patient\assets\images\js\script.js"></script>
+</body>
+</html>

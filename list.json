@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Emily Williams",
+      "gender": "Female",
+      "age": 18,
+      "profile_picture": "assets/images/emily.png"
+    },
+    {
+      "name": "Ryan Johnson",
+      "gender": "Male",
+      "age": 45,
+      "profile_picture": "assets/images/ryan.png"
+    },
+    {
+      "name": "Brandon Mitchell",
+      "gender": "Male",
+      "age": 36,
+      "profile_picture": "assets/images/brandon.png"
+    },
+    {
+      "name": "Jessica Taylor",
+      "gender": "Female",
+      "age": 28,
+      "profile_picture": "assets/images/jessica.png"
+    },
+    {
+      "name": "Samantha Johnson",
+      "gender": "Female",
+      "age": 56,
+      "profile_picture": "assets/images/samantha.png"
+    },
+    {
+      "name": "Ashley Martinez",
+      "gender": "Female",
+      "age": 54,
+      "profile_picture": "assets/images/ashley.png"
+    },
+    {
+      "name": "Olivia Brown",
+      "gender": "Female",
+      "age": 32,
+      "profile_picture": "assets/images/olivia.png"
+    },
+    {
+      "name": "Tyler Davis",
+      "gender": "Male",
+      "age": 19,
+      "profile_picture": "assets/images/tyler.png"
+    },
+    {
+      "name": "Kevin Anderson",
+      "gender": "Male",
+      "age": 30,
+      "profile_picture": "assets/images/kevin.png"
+    },
+    {
+      "name": "Dylan Thompson",
+      "gender": "Male",
+      "age": 36,
+      "profile_picture": "assets/images/dylan.png"
+    },
+    {
+      "name": "Nathan Evens",
+      "gender": "Male",
+      "age": 58,
+      "profile_picture": "assets/images/nathan.png"
+    },
+    {
+      "name": "Mike Nolan",
+      "gender": "Male",
+      "age": 31,
+      "profile_picture": "assets/images/mike.png"
+    },
+    {
+      "name": "John Martinez",
+      "gender": "Male",
+      "age": 59,
+      "profile_picture": "assets/images/john.png"
+    },
+    {
+      "name": "Richard Brown",
+      "gender": "Male",
+      "age": 77,
+      "profile_picture": "assets/images/richard.png"
+    },
+    {
+      "name": "Jennifer Johnson",
+      "gender": "Female",
+      "age": 89,
+      "profile_picture": "assets/images/jennifer.png"
+    },
+    {
+      "name": "Thomas Johnson",
+      "gender": "Male",
+      "age": 47,
+      "profile_picture": "assets/images/thomas.png"
+    },
+    {
+      "name": "William Johnson",
+      "gender": "Male",
+      "age": 51,
+      "profile_picture": "assets/images/William.png"
+    },
+    {
+      "name": "David Miller",
+      "gender": "Male",
+      "age": 34,
+      "profile_picture": "assets/images/DavidMiller.png"
+    },
+    {
+      "name": "David Johnson",
+      "gender": "Male",
+      "age": 61,
+      "profile_picture": "assets/images/DavidJohnson.png"
+    },
+    {
+      "name": "Elizabeth Johnson",
+      "gender": "Female",
+      "age": 31,
+      "profile_picture": "assets/images/elizabeth.png"
+    }
+  ]
+  
