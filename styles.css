@@ -268,13 +268,15 @@ body {
 /* Main Section */
 .main-section {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 20px;
     background-color: #f8f9fa; /* Example background color for the main section */
+    gap: 20px;
 }
 
 /* Container patient list on the left */
 .patients-section {
+    position: relative;
     width: 367px;
     height: 1054px;
     background-color: #FFFFFF;
@@ -298,6 +300,7 @@ body {
     color: #072635;
     opacity: 1;
     margin: 0; /* Remove default margin */
+    margin-left: 20px
 }
 
 .search-container {
@@ -306,8 +309,10 @@ body {
 }
 
 .search-icon {
+    position: absolute;
     width: 18px;
     height: 18px;
+    left: 347px;
     cursor: pointer;
     background: transparent url('assets/images/searchIcon.png') 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -389,7 +394,7 @@ body {
     margin-left: auto; /* This will push the dots all the way to the right */
 }
 
-/* Style for scrollbar (optional for styling the scroll bar if necessary) */
+/* Style for scrollbar  */
 .patients-list::-webkit-scrollbar {
     width: 6px;
     
@@ -398,7 +403,7 @@ body {
 .patients-list::-webkit-scrollbar-thumb {
     background-color: #072635;
     border-radius: 3px;
-    height: 100px;
+    height: 50px;
 }
 
 
@@ -416,9 +421,9 @@ body {
 /* Diagnosis history section styling */
 .diagnosis-history-section {
     position: absolute; /* Use absolute positioning to follow the given layout properties */
-    top: 122px; /* As per provided layout */
+    top: 100px; /* As per provided layout */
     left: 417px; /* As per provided layout */
-    width: 766px; /* Set a fixed width for the container */
+    width: 670px; /* Set a fixed width for the container */
     height: 673px; /* Fixed height as per the layout */
     background-color: #FFFFFF; /* Set the background color */
     border-radius: 16px; /* Rounded corners */
@@ -573,7 +578,7 @@ body {
     color: #1A202C;
 }
 
-.status .arrow-icon {
+.status.arrow-icon {
     width: 14px;
     height: 14px;
     margin-right: 5px;
@@ -668,6 +673,338 @@ body {
     height: 96px;
     margin-bottom: 10px;
 }
+
+
+
+.patient-details-section {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Takes full viewport height */
+    padding: 20px;
+}
+
+.patient-details-container {
+    position: absolute;
+    top: 100px; /* Align top with the design */
+    left: 1180px; /* Adjusted left position */
+    width: 280px; /* Matches the layout width */
+    height: 740px; /* Adjusted to match the height */
+    background-color: #ffffff; /* White background */
+    border-radius: 16px; /* Smooth rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1;
+    text-align: center;
+}
+
+.patient-photo {
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 50%;
+    margin: 0 auto 15px; /* Center the image with margin auto */
+}
+
+.jessica-name {
+    text-align: center; /* Center the text */
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 15px;
+    width: 100%; /* Ensure the heading takes full width within parent */
+}
+
+/* Combine section styles for all sections */
+.birth-section, .gender-section, .contact-section, .emergency-section, .insurance-section {
+    display: flex;
+    align-items: center; /* Align icon and text side by side */
+    margin-bottom: 15px; /* Add space between each section */
+}
+
+/* Combine text styles for all sections */
+.birth-text, .gender-text, .contact-text, .emergency-text, .insurance-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+/* Combine icon styles for all sections */
+.birth-section-icon, .gender-section-icon, .contact-section-icon, .emergency-section-icon, .insurance-section-icon {
+    width: 42px;
+    height: 42px;
+    margin-right: 20px; /* Add spacing between icon and text */
+ 
+}
+
+/* Ensure the icon does not shrink and text takes up the remaining space */
+.icon {
+    flex-shrink: 0;
+    margin-right: 20px; /* Adjust the space between the icon and text */
+}
+
+/* Fix for the insurance section */
+.insurance-text {
+    width: auto; /* Reset any conflicting width values */
+    flex-grow: 1; /* Ensure it grows to fill available space */
+    text-align: left; /* Keep the text aligned to the left */
+}
+
+
+/* Combine text p styles for all sections */
+.birth-text p, .gender-text p, .contact-text p, .emergency-text p, .insurance-text p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #072635;
+}
+
+/* Adjust button size for a compact appearance */
+.show-info-btn {
+    background-color: #01F0D0;
+    color: 072635;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 41px;
+    width: 220px;
+    width: 220px;
+    cursor: pointer;
+    font-size: 19px;
+    margin-top: 15px;
+    margin-left: auto;  /* Center the button horizontally */
+    margin-right: auto;
+    display: block; 
+    transition: background-color 0.3s ease;
+}
+
+.show-info-btn:hover {
+    background-color: #00b388;
+}
+
+
+
+
+/* Parent Container for Diagnostic List */
+.diagnostic-list-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Full width of the screen */
+    padding: 0; /* No extra padding to avoid affecting the position */
+    margin: 0; /* No margin to ensure position stays the same */
+}
+
+/* Diagnostic List Section */
+.diagnostic-list-section {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 693px;
+    margin-top: -1060px;
+    text-align: auto;
+    height: 260px;
+    
+    margin-left: 45px;
+
+}
+
+/* Diagnostic List Title */
+.diagnostic-list-section h2 {
+    background-color: #FFFFFF;
+    font-size: 33px;
+    font-weight: bold;
+    color: #072635;
+    margin-bottom: 20px;
+    position: relative; /* Make sure the title's position is movable */
+    top: -20px; /* This moves the element up relative to its normal position */
+}
+
+.diagnostic-navbar {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    background-color: #F6F7F8; /* Light gray background */
+    padding: 24px; /* Padding inside the navbar */
+    border-radius: 24px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 16px;
+    color: #072635; /* Text color */
+    margin-top: -20px;
+}
+
+/* Diagnostic List Header (Problem/Diagnosis, Description, Status) */
+.diagnostic-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-weight: bold;
+    color: #718096;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+
+
+/* status */
+.diagnostic-column {
+    font-size: 19px;
+    color: #072635;
+    
+    text-align: left;
+}
+
+.problem-column {
+    width: 30%; /* Adjust width for proper alignment */
+    font-size: 19px;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.description-column {
+    width: 50%;
+}
+
+.status-column {
+    width: 129px;
+    text-align: right;
+}
+
+/* Diagnostic List */
+.diagnostic-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    max-height: 400px; /* Set the max height for the list */
+    overflow-y: auto; /* Enable vertical scroll if necessary */
+    margin-left: 20px;
+    max-height: 120px;
+    overflow-y: auto;
+    height: 300px;
+}
+
+/* Diagnostic Item */
+.diagnostic-item {
+    display: flex;
+    justify-content: space-between; /* Space between the three columns */
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Problem/Diagnosis Column */
+.diagnostic-problem {
+    font-size: 16px;
+    font-weight: bold;
+    color: #072635;
+    width: 30%; /* Adjust width for better distribution */
+}
+
+/* Description Column */
+.diagnostic-description {
+    font-size: 14px;
+    color: #718096;
+    width: 50%; /* Takes more width for the description */
+}
+
+/* Status Column */
+.diagnostic-status {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2D3748;
+    text-align: right;
+    width: 20%; /* Takes up less space for the status */
+}
+
+/* Scrollbar Styling */
+.diagnostic-list-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+.diagnostic-list-section::-webkit-scrollbar-thumb {
+    background-color: #072635;
+    border-radius: 3px;
+    height: 59px;
+}
+
+/* Hover effect for diagnostic items */
+.diagnostic-item:hover {
+    background-color: #f0f4f8; /* Slight background color on hover */
+}
+
+
+
+
+
+.lab-results-container {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    width: 300px; /* Adjust the width to fit the design */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    top: -1030px; /* Moves the container 50px upwards */
+    margin-left: 1170px;
+    width: 280px;
+    height: 240px;
+}
+
+
+/* Lab Results Title */
+.lab-results-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #072635;
+    margin-bottom: 15px;
+}
+
+/* Lab Results List */
+.lab-results-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    max-height: 250px; /* Set a max height to allow scrolling */
+    overflow-y: auto; /* Enable vertical scroll */
+}
+
+/* Individual Lab Result Item */
+.lab-result-item {
+    display: flex;
+    justify-content: space-between; /* Space between name and icon */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0; /* Divider between items */
+    cursor: pointer;
+}
+
+.lab-result-item.active {
+    background-color: #F6F7F8; /* Highlight the active item */
+}
+
+/* Lab Result Name */
+.lab-result-name {
+    font-size: 16px;
+    color: #072635;
+}
+
+/* Download Icon */
+.download-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Scrollbar Styling */
+.lab-results-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lab-results-list::-webkit-scrollbar-thumb {
+    background-color: #072635;
+    border-radius: 3px;
+}
+
 
 
 

@@ -70,45 +70,23 @@ const config = {
 
 const bloodPressureChart = new Chart(ctx, config);
 
-// Function to load patients from the JSON file
-async function loadPatients() {
-    try {
-        // Fetch the JSON file with patient data
-        const response = await fetch('list.json');
-        const patients = await response.json(); // Parse the JSON data
-        console.log(patients); // Log the data
+const username = 'coalition';
+const password = 'skills-test';
+const credentials = btoa(`${username}:${password}`);
 
-        const patientsList = document.getElementById('patientsList'); // Get the patients list element
-
-        // Clear any existing content in the patients list
-        patientsList.innerHTML = '';
-
-        // Loop through the patient data and create HTML for each patient
-        patients.forEach(patient => {
-            const patientItem = document.createElement('li');
-            patientItem.classList.add('patient-item');
-
-            // Create the patient item structure dynamically
-            patientItem.innerHTML = `
-                <div class="patient-info">
-                    <img src="${patient.profile_picture}" alt="${patient.name}" class="patient-img">
-                    <div class="patient-text">
-                        <span class="patient-name">${patient.name}</span>
-                        <span class="patient-details">${patient.gender}, ${patient.age}</span>
-                    </div>
-                    <img src="assets/images/moreHoriz.png" alt="More Options" class="more-options">
-                </div>
-            `;
-
-            // Append the patient item to the list
-            patientsList.appendChild(patientItem);
-        });
-
-    } catch (error) {
-        console.error('Error fetching patients:', error);
+fetch('https://fedskillstest.coalitiontechnologies.workers.dev', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Basic ${credentials}`,
+        'Content-Type': 'application/json'
     }
-}
-
-// Call the function to load patients on page load
-window.onload = loadPatients;
+})
+.then(response => response.json())
+.then(data => {
+    // Display Jessica Taylor's information
+    const jessicaData = data.find(patient => patient.name === "Jessica Taylor");
+    console.log(jessicaData);
+    // Here, manipulate and display the data as needed
+})
+.catch(error => console.error('Error fetching data:', error));
 
